@@ -7,8 +7,6 @@
     <meta name="author" content=" FILL ME IN ">
     <title>Cameron Pittman: Portfolio</title>
 
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-
     <style>
          html {
            font-size: 100%;
@@ -115,6 +113,17 @@
       // TODO: replace with your Google Analytics profile ID.
       ga('create', 'UA-XXXX-Y');
       ga('send', 'pageview');
+
+      (function loadStyleSheet(src){
+         if (document.createStyleSheet) document.createStyleSheet(src);
+         else {
+            var stylesheet = document.createElement('link');
+            stylesheet.href = src;
+            stylesheet.rel = 'stylesheet';
+            stylesheet.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(stylesheet);
+         }
+      })('//fonts.googleapis.com/css?family=Open+Sans:400,700');
     </script>
   </body>
 </html>
